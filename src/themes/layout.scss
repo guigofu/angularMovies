@@ -1,0 +1,23 @@
+@import 'variables';
+
+@mixin lyContainer($size, $mt) {
+    .container{
+        width: $size;
+        margin: auto;
+    }
+
+    .section{
+        margin-top: $mt
+    }
+}
+
+@include lyContainer($ly-sm, $sm);
+
+//regla, para la cual se va a aplicar las líneas de código
+@media only screen and (min-width: 600px){
+    @include lyContainer($ly-md, $md);
+}
+
+@media only screen and (min-width: 920px){
+    @include lyContainer($ly-lg, $lg);
+}
